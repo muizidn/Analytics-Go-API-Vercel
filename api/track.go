@@ -18,7 +18,12 @@ type TrackEventResponse struct {
 }
 
 func TrackEvent(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodPost {
+	if r.Method == http.MethodOptions {
+		w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS, PATCH, DELETE, POST, PUT")
+		w.Header().Set("Access-Control-Allow-Headers", "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version")
+		w.WriteHeader(http.StatusNoContent)
+		return
+	} else if r.Method != http.MethodPost {
 		http.Error(w, "Invalid request method. Use POST.", http.StatusMethodNotAllowed)
 		return
 	}
@@ -46,6 +51,9 @@ func TrackEvent(w http.ResponseWriter, r *http.Request) {
 	}
 	w.WriteHeader(http.StatusCreated)
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Credentials", "true")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+
 	if err := json.NewEncoder(w).Encode(response); err != nil {
 		http.Error(w, "Failed to encode JSON response", http.StatusInternalServerError)
 		return
