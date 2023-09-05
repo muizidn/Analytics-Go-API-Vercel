@@ -1,4 +1,4 @@
-module template-go-vercel
+module analytics-go-api-vercel
 
 go 1.20
 

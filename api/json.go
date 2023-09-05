@@ -13,7 +13,7 @@ func Json(w http.ResponseWriter, r *http.Request) {
 	resp["message"] = "Hello World from Go! 👋"
 	resp["language"] = "go"
 	resp["cloud"] = "Hosted on Vercel! ▲"
-	resp["github"] = "https://github.com/riccardogiorato/template-go-vercel/blob/main/api/json.go"
+	resp["github"] = "https://github.com/muizidn/analytics-go-api-vercel/blob/main/api/json.go"
 	jsonResp, err := json.Marshal(resp)
 	if err != nil {
 		fmt.Printf("Error happened in JSON marshal. Err: %s", err)

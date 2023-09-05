@@ -1,8 +1,17 @@
 {
-  "name": "template-go-vercel",
+  "name": "analytics-go-api-vercel",
   "version": "1.0.0",
-  "repository": "https://github.com/riccardogiorato/template-go-vercel",
-  "author": "riccardogiorato <https://riccardogiorato.com/>",
+  "repository": "https://github.com/muizidn/Analytics-Go-API-Vercel",
+  "authors": [
+    {
+      "name": "muizidn",
+      "url": "https://github.com/muizidn"
+    },
+    {
+      "name": "riccardogiorato",
+      "url": "https://riccardogiorato.com"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "vercel": "^31.2.2"

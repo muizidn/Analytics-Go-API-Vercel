@@ -34,7 +34,7 @@ func Redis(w http.ResponseWriter, r *http.Request) {
 
 	resp := make(map[string]string)
 	resp["foo"] = foo.Val()
-	resp["github"] = "https://github.com/riccardogiorato/template-go-vercel/blob/main/api/redis.go"
+	resp["github"] = "https://github.com/muizidn/analytics-go-api-vercel/blob/main/api/redis.go"
 	body, err := json.Marshal(resp)
 
 	if err != nil {

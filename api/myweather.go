@@ -35,7 +35,7 @@ func MyWeather(w http.ResponseWriter, r *http.Request) {
 	resp["latitude"] = fmt.Sprint(userLocation["latitude"].(float64))
 	resp["longitude"] = fmt.Sprint(userLocation["longitude"].(float64))
 
-	resp["github"] = "https://github.com/riccardogiorato/template-go-vercel/blob/main/api/myweather.go"
+	resp["github"] = "https://github.com/muizidn/analytics-go-api-vercel/blob/main/api/myweather.go"
 
 	// Response API Weather
 	urlWeatherApi := "https://api.openweathermap.org/data/2.5/weather?lat=" + resp["latitude"] + "&lon=" + resp["longitude"] + "&appid=" + os.Getenv("API_KEY_OPENWEATHER")
