@@ -8,8 +8,8 @@
     "vercel": "^31.2.2"
   },
   "scripts": {
-    "setup": "yarn vercel login && yarn vercel link",
-    "start": "yarn vercel dev",
-    "dev": "yarn start"
+    "setup": "pnpm vercel login && pnpm vercel link",
+    "start": "pnpm vercel dev",
+    "dev": "pnpm start"
   }
 }
